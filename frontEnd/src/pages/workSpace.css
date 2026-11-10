@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f7f7f8;
+  color: #222;
+}
+
+header {
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #e3e3e6;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e3e3e6;
+  border-radius: 8px;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 2rem;
+  border: 2px dashed #c4c4cc;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropzone:hover {
+  border-color: #888;
+}
+
+.dropzone small {
+  color: #777;
+}
+
+.preview {
+  min-height: 120px;
+  padding: 1rem;
+  border: 1px solid #e3e3e6;
+  border-radius: 8px;
+  color: #777;
+  text-align: center;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+textarea {
+  flex: 1;
+  min-height: 300px;
+  padding: 1rem;
+  font-family: ui-monospace, monospace;
+  font-size: 0.9rem;
+  border: 1px solid #e3e3e6;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+button {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #222;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #444;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}
