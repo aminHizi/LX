@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Secrets (create .env later for your API keys)
+.env
+.env.*
+!.env.example
+
+# User uploads and generated files
+uploads/
+output/
+tmp/
+
+# LaTeX build junk
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Logs and OS/editor files
+npm-debug.log*
+.DS_Store
+.vscode/
+.idea/
