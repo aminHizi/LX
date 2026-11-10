@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./Workspace.css";
+import axios from "axios";
+import "./workSpace.css";
 
 export default function WorkSpace() {
   const [file, setFile] = useState(null);
@@ -20,10 +21,13 @@ export default function WorkSpace() {
     }
   };
 
-  const handleConvert = () => {
+  const handleConvert = async () => {
     if (!file) return;
     // TODO: send `file` to your backend / API and call setLatex(result)
-    setLatex("% LaTeX output will appear here");
+    const formData = new FormData();
+    formData.append("file", file);
+    const {data} = await axios.post("/api/convert", formData);
+    setLatex("this is me just debugging what data.latex has: " + data.latex);
   };
 
   const handleCopy = () => {
