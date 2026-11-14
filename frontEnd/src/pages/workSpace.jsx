@@ -27,7 +27,7 @@ export default function WorkSpace() {
     const formData = new FormData();
     formData.append("file", file);
     const {data} = await axios.post("/api/convert", formData);
-    setLatex("this is me just debugging what data.latex has: " + data.latex);
+    setLatex(data.latex);
   };
 
   const handleCopy = () => {
